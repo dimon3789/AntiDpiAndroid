@@ -190,7 +190,7 @@ object StrategyMapper {
     }
 
     private fun tokenize(input: String): List<String> {
-        val regex = Regex("[^\s\"']+|\"([^\"]*)\"|'([^']*)'")
+        val regex = Regex("""[^\s"]+|"([^"]*)"|'([^']*)'""")
         return regex.findAll(input).map { match ->
             match.groups[1]?.value ?: match.groups[2]?.value ?: match.value
         }.toList()
