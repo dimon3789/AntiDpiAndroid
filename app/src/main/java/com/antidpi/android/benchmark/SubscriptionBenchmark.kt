@@ -202,7 +202,7 @@ object SubscriptionBenchmark {
     private fun decodeIfBase64(text: String): String {
         if (text.contains("vless://", ignoreCase = true)) return text
         return runCatching {
-            val cleaned = text.replace("\s+".toRegex(), "")
+            val cleaned = text.replace("\\s+".toRegex(), "")
             val bytes = Base64.decode(cleaned, Base64.DEFAULT)
             String(bytes, StandardCharsets.UTF_8)
         }.getOrDefault(text)
