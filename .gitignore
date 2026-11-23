@@ -1,0 +1,18 @@
+# Gradle & Android
+.gradle/
+build/
+app/build/
+local.properties
+*.iml
+.idea/
+captures/
+.cxx/
+
+# Temporary ByeDPI build dir
+.build_byedpi/
+
+# Compiled native binaries (built in CI or via scripts/build_ciadpi_android.sh)
+app/src/main/jniLibs/**/*.so
+
+# Output APKs in repo root
+*.apk
