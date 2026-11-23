@@ -85,8 +85,7 @@ fun ConverterTab(viewModel: MainViewModel) {
             ) {
                 Text(
                     text = state.generatedJson.ifBlank {
-                        "Здесь появится готовый JSON-конфиг Xray-core с "dialerProxy": "antidpi-out" на 127.0.0.1:1080.
-" +
+                                            "Здесь появится готовый JSON-конфиг Xray-core с \"dialerProxy\": \"antidpi-out\" на 127.0.0.1:1080.\n" +
                             "Импортируйте его в v2rayNG, Karing, NekoBox или Throne как Custom Config."
                     },
                     fontFamily = FontFamily.Monospace,
